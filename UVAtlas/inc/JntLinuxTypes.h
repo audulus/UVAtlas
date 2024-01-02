@@ -84,7 +84,7 @@ static int swprintf_s(wchar_t* buff, const wchar_t* fmt, ...)
 {
     va_list args;
     va_start(args, fmt);
-    vswprintf(buff, sizeof(buff) / sizeof(*buff), fmt, args);
+    return vswprintf(buff, sizeof(buff) / sizeof(*buff), fmt, args);
 };
 
 typedef unsigned long DWORD;
